@@ -7,6 +7,7 @@ const products = require("./routes/products");
 const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const connectDB = require("./db/connect");
+require("express-async-errors");
 
 app.use(express.json());
 app.use("/api/v1/products", products);
